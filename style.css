@@ -1,4 +1,4 @@
-/* Basig reset */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,26 +9,89 @@
     line-height: 24px;
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+header {
+    width: 100%;
+    background-color: #4C5270; /* Cornflower */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #F652A0; /* Hot Pink */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #4C5270; /* Cornflower */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Existing styles here */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #BCECE0; /* Tiffany Blue */
     color: black;
     height: 100vh;
     width: 100vw;
-    overflow: hidden; /* Remove scroll bars */
+    overflow: auto; /* Enable scroll bars */
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    height: 100vh; /* Ensure full viewport height */
-    width: 100vw; /* Ensure full viewport width */
-    justify-content: center;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Ensure sections stack vertically */
+    padding-top: 60px; /* Adjust for fixed header */
+    padding-bottom: 60px; /* Adjust for footer space */
     align-items: center;
+    width: 100vw;
     background-color: transparent;
-    color: rgb(99, 97, 97);
+    color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+}
+
+.top-sections {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
 }
 
 section {
@@ -37,9 +100,10 @@ section {
     justify-content: center;
     align-items: center;
     background-color: #f8f4f4;
-    color: rgb(99, 97, 97);
-    font-family: 'Roboto', sans-serif;
-    padding: 20px; /* Ensure padding inside sections */
+    color: rgb(6, 6, 6);
+    padding: 40px 20px; /* Increased padding for better section spacing */
+    box-sizing: border-box;
+    margin: 10px;
 }
 
 /* Text styling */
@@ -48,10 +112,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin: 0;
     padding: 0;
-    color: rgb(99, 97, 97);
     text-align: center;
-    font-size: 30px;
-    line-height: 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
@@ -59,12 +120,32 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
+h1, h4, h5, h6 {
+    color: #4C5270; /* Cornflower */
+    font-size: 30px;
+    line-height: 30px;
+}
+
+h2 {
+    font-family: 'Gilroy', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+h3 {
+    font-family: 'Gilroy', sans-serif;
+    color: #060606;
+    font-size: 32px;
+    line-height: 30px;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     margin: 0;
     padding: 0;
-    color: rgb(99, 97, 97);
+    color: rgb(5, 5, 5);
     text-align: center;
     font-size: 20px;
     line-height: 30px;
@@ -78,37 +159,28 @@ p {
 hr {
     width: 100%;
     height: 1px;
-    background-color: rgb(99, 97, 97);
+    background-color: #4C5270; /* Cornflower */
     border: none;
     transition: 0.3s;
     cursor: pointer;
     margin: 16px 0;
 }
 
-/* Button styling */
-.dark-btn {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: rgb(14, 13, 13);
-    text-align: center;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: 0.3s;
-    cursor: pointer;
-    background-color: black;
-    border: 2px solid rgb(252, 249, 249);
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin: 16px;
+/* Button container styling */
+#button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Centers the buttons vertically if needed */
+    flex-direction: column; /* Stack the buttons vertically */
+    gap: 16px; /* Space between the buttons */
+    margin-top: 20px; /* Add space between the paragraph and buttons */
 }
 
-.outline-btn {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: rgb(12, 12, 12);
+/* General button styles */
+.general-btn, .outline-btn {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    color: #F652A0; /* Hot Pink */
     text-align: center;
     font-size: 20px;
     line-height: 30px;
@@ -118,33 +190,38 @@ hr {
     transition: 0.3s;
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid rgb(99, 97, 97);
-    border-radius: 20px;
+    border: 2px solid #F652A0; /* Hot Pink */
+    border-radius: 4px; /* Set a specific border-radius */
     padding: 8px 16px;
-    margin: 16px;
+    margin: 16px auto; /* Center the button horizontally */
     outline: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
-.outline-btn:hover {
-    background-color: rgb(99, 97, 97);
-    color: rgb(12, 12, 12);
+.general-btn:hover, .outline-btn:hover {
+    background-color: #F652A0; /* Hot Pink */
+    color: white;
 }
 
 /* Name and image section */
 section#name {
-    width: 40%;
-    height: 100%;
+    flex: 1; /* Take equal space with the about section */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: auto;
+    margin: 16px; /* Adjust margins for better spacing */
 }
 
 section#name img {
     width: 80%;
     height: auto;
     border-radius: 20%;
-    border: 20px solid rgb(99, 97, 97);
+    border: 20px solid #36EEE0; /* Cyan */
     object-fit: cover;
     object-position: center;
     padding: 10px;
@@ -157,23 +234,19 @@ section#name > div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 16px;
+    padding: 16px;
 }
 
 /* About section */
 section#about {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(19, 99, 247);
-    padding: 20px
-    border-radius: 20px;
-    border: 2px solid rgb(0, 0, 0);
+    flex: 1; /* Take equal space with the name section */
+    background-color: #36EEE0; /* Cyan */
+    color: rgb(244, 239, 239);
     transition: 0.3s;
-    overflow: hidden; /* Remove scroll bars */
+    cursor: pointer;
+    text-align: center;
+    margin: 16px; /* Adjust margins for better spacing */
 }
 
 #about-me-content {
@@ -183,8 +256,130 @@ section#about {
     width: 90%;
     height: auto;
     border-radius: 20px;
-    border: 20px solid rgb(99, 97, 97);
     text-align: center;
+}
+
+/* Projects section */
+section#projects {
+    background-color: #4C5270; /* Cornflower */
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    margin: 16px; /* Adjust margins for better spacing */
+}
+
+section#projects .project {
+    background-color: #f8f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; /* Space between the project elements */
+    font-size: 20px;
+    color: rgb(6, 6, 6);
+    padding: 20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    object-position: 60px 10px 10px 10px; 
+    object-fit: contain;
+    border: 20px solid #36EEE0; /* Cyan */
+    border-radius: 20px;
+    padding: 10px;
+    margin: 60px;
+    flex: 1;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    transition: 0.3s;
+    cursor: pointer;
+    max-width: 800px; /* Ensure it doesn't get too wide */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section#projects .project h4 {
+    margin-bottom: 10px; /* Add space below the project name */
+}
+
+section#projects .project p {
+    margin-bottom: 20px; /* Add space below the project description */
+}
+
+/* Skills section */
+section#skills {
+    background-color: #BCECE0; /* Tiffany Blue */
+    color: #4C5270; /* Cornflower */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px; /* Adjust margins for better spacing */
+}
+
+section#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+section#skills ul li {
+    background-color: #f8f4f4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Contact section */
+section#contact {
+    background-color: #F652A0; /* Hot Pink */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px; /* Adjust margins for better spacing */
+}
+
+section#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px; /* Ensure form doesn't get too wide */
+}
+
+section#contact label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+section#contact input,
+section#contact textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+section#contact input[type="submit"] {
+    background-color: white;
+    color: #F652A0; /* Hot Pink */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section#contact input[type="submit"]:hover {
+    background-color: #F652A0; /* Hot Pink */
+    color: white;
 }
 
 /* Social icons */
@@ -211,20 +406,20 @@ ul.social-icons li a img:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    main {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-sections {
         flex-direction: column;
     }
 
-    section#name, section#about {
+    section {
         width: 100%;
-        height: auto;
     }
 
-    section#about {
-        margin-top: 20px;
-    }
-
-    #about-me-content {
+    #about-me-content, section#projects .project, section#contact form {
         width: 100%;
     }
 }

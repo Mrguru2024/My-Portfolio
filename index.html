@@ -5,48 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony MrGuru Feaster Full Stack Web Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gilroy:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#name">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <section id="name">
-            <img src="./assets/Assets/Photos/Casual of me.jpg" alt="Anthony MrGuru"> 
-            <div>
+        <div class="top-sections">
+            <section id="name">
+                <img src="./assets/Assets/Photos/Casual of me.jpg" alt="Anthony MrGuru"> 
                 <div>
-                    <h1>Anthony MrGuru</h1>
-                    <h2>Full Stack Web Developer</h2>
+                    <hr />
+                    <div>
+                        <h1>Anthony MrGuru Feaster</h1>
+                        <h2>Full Stack Web Developer</h2>
+                    </div>
+                    <a href="mailto:5epmgllc@gmail.com" class="general-btn">Email me</a>
                 </div>
-                <a href="mailto:5epmgllc@gmail.com">
-                    <button id="dark-btn">Email me</button>
-                </a>
+            </section>
+            <section id="about">
+                <div id="about-me-content">
+                    <h3>About Me</h3>
+                    <hr />
+                    <p>
+                        Hello! I’m Anthony Feaster, an innovative entrepreneur and tech enthusiast based in Atlanta,
+                        Georgia. With a strong background in electronic repair and automotive locksmiths,
+                        I founded SSI-M.E.T Repairs-KeyCode Help to bring advanced technology solutions to the locksmith industry. Currently, I’m expanding my skill set through Full Stack Java Developer training at Per Scholas.
+                        
+                        My passion lies in problem-solving and continuous learning. I thrive on creating solutions that improve customer experiences and streamline operations. Whether it’s developing new web applications or leading a team, I am committed to excellence and innovation. Outside of work, I enjoy exploring new tech trends, playing video games, and spending quality time with my family.
+                        
+                        Let’s connect and explore how we can collaborate on exciting tech projects!
+                    </p>
+                    <div id="button-container">
+                        <a href="path/to/resume.pdf" class="general-btn">Download Resume</a>
+                        <a href="https://github.com/Mrguru2024" class="general-btn">GitHub</a>
+                    </div>
+                </div>
+                <ul class="social-icons">
+                    <li><a href="https://www.instagram.com/mrcampaigngang"><img src="./assets/Assets/Social logos/Instagram.png" alt="instagram"></a></li>
+                    <li><a href="https://www.facebook.com/AnthonyTeamTitanATL/"><img src="./assets/Assets/Social logos/Facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://example.com"><img src="./assets/Assets/Social logos/LinkedIn.png" alt="LinkedIn"></a></li>
+                </ul>
+            </section>
+        </div>
+        <section id="projects">
+            <div>
+                <h3>Projects</h3>
+                <hr />
+                <div class="project">
+                    <h4>Keycode Help</h4>
+                    <p>A SaaS business that provides Vin to KeyCode services and online resources for locksmiths. This platform is designed to support automotive professionals with key coding and programming needs.</p>
+                    <a href="project-link" class="general-btn">View Project</a>
+                </div>
+                <!-- Repeat .project div for more projects -->
             </div>
         </section>
-        <section id="about">
-            <div id="about-me-content">
-                <h3>About Me</h3>
+        <section id="skills">
+            <div>
+                <h3>Skills</h3>
                 <hr />
-                <p>
-                    Hello! I’m Anthony Feaster, an innovative entrepreneur and tech enthusiast based in Atlanta,
-                    Georgia. With a strong background in electronic repair and automotive locksmithing,
-                    I founded SSI-M.E.T Repairs-KeyCode Help to bring advanced technology solutions to the locksmith industry. Currently, I’m expanding my skill set through Full Stack Java Developer training at Per Scholas.
-                    
-                    My passion lies in problem-solving and continuous learning. I thrive on creating solutions that improve customer experiences and streamline operations. Whether it’s developing new web applications or leading a team, I am committed to excellence and innovation. Outside of work, I enjoy exploring new tech trends, playing video games, and spending quality time with my family.
-                    
-                    Let’s connect and explore how we can collaborate on exciting tech projects!
-                </p>
-            <div><br>
-                <div id="button-container">
-                    <a href="path/to/resume.pdf" class="outline-btn">Download Resume</a><span>|                    <a href="https://github.com/Mrguru2024" class="outline-btn">GitHub</a></span>
-                </div>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>HTML & CSS</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Java</li>
+                    <li>GitHub</li>
+                    <!-- Add more skills as needed -->
+                </ul>
             </div>
+        </section>
+        <section id="contact">
+            <div>
+                <h3>Contact</h3>
+                <hr />
+                <form action="mailto:5epmgllc@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                    <input type="submit" value="Send" class="general-btn">
+                </form>
             </div>
-                <div>   
-            <ul class="social-icons">
-                <li><a href="https://www.instagram.com/mrcampaigngang"><img src="./assets/Assets/Social logos/Instagram.png" alt="instagram"></a></li>
-                <li><a href="https://www.facebook.com/AnthonyTeamTitanATL/"><img src="./assets/Assets/Social logos/Facebook.png" alt="facebook"></a></li>
-                <li><a href="https://example.com"><img src="./assets/Assets/Social logos/LinkedIn.png" alt="LinkedIn"></a></li>
-            </ul>
-                </div>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Anthony MrGuru Feaster. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
