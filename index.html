@@ -9,6 +9,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Gilroy:wght@400;700&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D15LMWKQ8G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-D15LMWKQ8G');
+    </script>
 </head>
 
 <body>
@@ -44,8 +53,7 @@
                         Hello! I’m Anthony Feaster, an innovative entrepreneur and tech enthusiast based in Atlanta,
                         Georgia. With a strong background in electronic repair and automotive locksmiths,
                         I founded SSI-M.E.T Repairs-KeyCode Help to bring advanced technology solutions to the locksmith
-                        industry. Currently, I’m expanding my skill set through Full Stack Java Developer training at
-                        Per Scholas.
+                        industry. Currently, I’m expanding my skill set through Codenoobs WebDev Incubator.
 
                         My passion lies in problem-solving and continuous learning. I thrive on creating solutions that
                         improve customer experiences and streamline operations. Whether it’s developing new web
@@ -74,14 +82,22 @@
                 <hr />
                 <div class="project">
                     <h4>Keycode Help</h4>
-                    <p>A SaaS business that provides Vin to KeyCode services and online resources for locksmiths. This
+                    <p>A SaaS business that provides VIN to KeyCode services and online resources for locksmiths. This
                         platform is designed to support automotive professionals with key coding and programming needs.
                     </p>
                     <a href="https://github.com/Mrguru2024" class="general-btn">View Projects</a>
                 </div>
-                <!-- Repeat .project div for more projects -->
+                <div class="project">
+                    <h4>Work With Us</h4>
+                    <p>Are you looking to develop or redesign a website? Share your project details with us using the
+                        link below:</p>
+                    <a href="https://forms.gle/vu11jF1nixkoRxH86" class="general-btn" target="_blank">Web Development
+                        Inquiry Form</a>
+                </div>
             </div>
         </section>
+
+
         <section id="skills">
             <div>
                 <h3>Skills</h3>
@@ -101,17 +117,30 @@
             <div>
                 <h3>Contact</h3>
                 <hr />
-                <form action="mailto:5epmgllc@gmail.com" method="post" enctype="text/plain">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name"><br>
-                    <label for="email">Email:</label><br>
-                    <input type="text" id="email" name="email"><br>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-                    <input type="submit" value="Send" class="general-btn">
-                </form>
+                <p>Fill out the form below to get in touch with us!</p>
+                <div class="form-container">
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSc_WkngsqNoRt3G8qAZrLLivASz5ys3hmZL3bXU0DpKCmWRqw/viewform?embedded=true"
+                        frameborder="0" style="width: 100%; height: 100%; border: none; min-height: 700px;">
+                        Loading…
+                    </iframe>
+                </div>
             </div>
         </section>
+
+        <script>
+            // Track interaction with the Google Form iframe
+            document.querySelector('iframe').addEventListener('focus', function () {
+                if (window.gtag) {
+                    gtag('event', 'form_interaction', {
+                        'event_category': 'Contact',
+                        'event_label': 'General Inquiry Form'
+                    });
+                }
+            });
+        </script>
+
+
     </main>
     <footer>
         <p>&copy; 2024 Anthony MrGuru Feaster. All Rights Reserved.</p>
